@@ -38,6 +38,8 @@ export const ViewButton = styled.button`
     &:hover {
        transform: scale(1.09)
     }
+    
+    
 `
 
 export const ViewAll = styled.p`
@@ -51,4 +53,13 @@ export const ViewAll = styled.p`
     text-align: center;
     color: #ffffff;
     margin-bottom: 0;
+`
+
+export const ContactButton = styled.div`
+    position: absolute;
+    top: 70%; 
+    left: 45%;
+    @media screen and (max-width: 490px) {
+        left: 39%;
+    }
 `

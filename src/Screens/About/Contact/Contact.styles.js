@@ -16,6 +16,11 @@ export const ContactHeader = styled.h2`
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+    @media screen and (max-width: 490px) {
+        text-align: center;
+        font-size: 3rem;
+    }
+    
 `
 
 export const ContactSection = styled.div`

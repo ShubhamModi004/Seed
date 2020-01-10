@@ -13,6 +13,9 @@ export const Container = styled.div`
 export const Section = styled.div`
     height: 10rem;
     border-bottom: 1px solid #000000;
+    @media screen and (max-width: 490px) {
+        height: 25rem;
+    }
     
 `
 
@@ -60,6 +63,9 @@ export const AboutHeader = styled.h1`
     letter-spacing: normal;
     text-align: left;
     color: #000000;
+    @media screen and (max-width: 490px) {
+        text-align: center;
+    }
 `
 
 export const AboutContent = styled.p`
@@ -73,4 +79,7 @@ export const AboutContent = styled.p`
     text-align: left;
     color: #000000;
     margin: 4% 0;
+    @media screen and (max-width: 490px) {
+        text-align: center;
+    }
 `
