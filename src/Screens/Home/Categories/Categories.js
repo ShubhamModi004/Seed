@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { Component, Fragment } from 'react'
 import VideoPlayer from '../../../components/VideoPlayer';
 import "../../../../node_modules/video-react/dist/video-react.css";
 import {
@@ -17,84 +16,216 @@ import {
     CatImageBg
 } from './Categories.styles';
 
+
 import { navigate } from "gatsby"
 
 
 
 // importing image
-import Research from '../../../components/Research';
-import Training from '../../../components/Training';
+import Research from '../../../components/images/Research';
+import Training from '../../../components/images/Training';
+import Branding from '../../../components/images/Branding';
+import Innovative from '../../../components/images/Innovative';
 
 
 
-function Caetgories(props) {
-    return (
-        <Container>
-            <Header><GreenSpan>Brand</GreenSpan> Desgin</Header>
-            <VideoPlayer source={"https://seedmarketting.s3.ap-south-1.amazonaws.com/Descale.mov"} />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <ViewButton to="/brand"><ViewAll>View all</ViewAll></ViewButton>
-            </div>
-            <Header style={{ textAlign: 'center' }}><GreenSpan>Innovative</GreenSpan> Marketing Ideas</Header>
-            <VideoPlayer source={"https://seedmarketting.s3.ap-south-1.amazonaws.com/Descale.mov"} />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <ViewButton onClick={() => navigate('/brands/brand')}><ViewAll>View all</ViewAll></ViewButton>
-            </div>
-            <Categ mobile={false} reverse={true} className="row">
-                <div className="col-md-6 ">
-                    <TextContainer>
-                        <Header><GreenSpan>Training </GreenSpan></Header>
-                        <TextDesc>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+class Caetgories extends Component {
+    state = {
+        brandVisible: false,
+        researchVisible: false,
+        trainigVisible: false,
+        innovativeVisible: false
+    }
+    render() {
+        const { brandVisible, researchVisible, trainigVisible, innovativeVisible } = this.state;
+        return (
+            <Container>
+                <Categ mobile={false} reverse={true} className="row">
+                    <div className="col-md-6 ">
+                        <TextContainer>
+                            <Header><GreenSpan>Brand</GreenSpan> Design</Header>
+                            <TextDesc>
+                                Brand design using multiple strategies
                         </TextDesc>
-                        <WatchButton onClick={() => navigate('/brands/brand')}>
-                            <WatchText>watch</WatchText>
-                        </WatchButton>
-                    </TextContainer>
+                            <WatchButton onClick={() => this.setState({ brandVisible: !brandVisible })}>
+                                {brandVisible ? (
+                                    <WatchText>Close</WatchText>
+                                ) : (
+                                        <WatchText>watch</WatchText>
+                                    )}
+                            </WatchButton>
+                        </TextContainer>
+                    </div>
+                    <div className="col-md-6" style={{ position: 'relative' }}>
+                        {brandVisible ? (
+                            <VideoPlayer source={"http://seedmarketting.s3.ap-south-1.amazonaws.com/Descale.mov"} />
 
-                </div>
-                <div className="col-md-6" style={{ position: 'relative' }}>
-                    <CatImage><Training /></CatImage>
-                    <CatImageBg />
-                </div>
-            </Categ>
-            <Categ mobile={true} desktopUnVisible={true} reverse={true} className="row">
-                <div className="col-md-6" style={{ position: 'relative' }}>
-                    <CatImage><Training /></CatImage>
-                    <CatImageBg />
-                </div>
-                <div className="col-md-6 ">
-                    <TextContainer>
-                        <Header mobileHeader={true}><GreenSpan>Training </GreenSpan></Header>
-                        <TextDesc>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </TextDesc>
-                        <WatchButton onClick={() => navigate('/brands/brand')}>
-                            <WatchText>watch</WatchText>
-                        </WatchButton>
-                    </TextContainer>
-                </div>
-            </Categ>
-            <Categ mobile={true} className="row">
-                <div className="col-md-6" style={{ position: 'relative' }}>
-                    <CatImage ><Research /></CatImage>
-                    <CatImageBg style={{ left: '-1.4rem', backgroundImage: 'linear-gradient(to bottom, #d600d6, #a455cb)' }} />
-                </div>
-                <div className="col-md-6">
-                    <TextContainer>
-                        <Header mobileHeader={true}><GreenSpan>Research</GreenSpan></Header>
-                        <TextDesc>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </TextDesc>
-                        <WatchButton purple={true} onClick={() => navigate('/brands/brand')}>
-                            <WatchText>watch</WatchText>
-                        </WatchButton>
-                    </TextContainer>
+                        ) : (
+                                <Fragment>
+                                    <CatImage><Branding /></CatImage>
+                                    <CatImageBg />
+                                </Fragment>
+                            )
+                        }
+                    </div>
+                </Categ>
+                <Categ mobile={true} desktopUnVisible={true} reverse={true} className="row">
+                    <div className="col-md-6" style={{ position: 'relative' }}>
+                        {brandVisible ? (
+                            <VideoPlayer source={"http://seedmarketting.s3.ap-south-1.amazonaws.com/Descale.mov"} />
 
+                        ) : (
+                                <Fragment>
+                                    <CatImage><Branding /></CatImage>
+                                    <CatImageBg />
+                                </Fragment>
+                            )
+                        }
+                    </div>
+                    <div className="col-md-6 ">
+                        <TextContainer>
+                            <Header mobileHeader={true}><GreenSpan>Brand</GreenSpan> Design</Header>
+                            <TextDesc>
+                                Brand design using multiple strategies
+                        </TextDesc>
+                            <WatchButton onClick={() => this.setState({ brandVisible: !brandVisible })}>
+                                {brandVisible ? (
+                                    <WatchText>Close</WatchText>
+                                ) : (
+                                        <WatchText>watch</WatchText>
+                                    )}
+                            </WatchButton>
+                        </TextContainer>
+                    </div>
+
+                </Categ>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <ViewButton to="/brand"><ViewAll>View all</ViewAll></ViewButton>
                 </div>
-            </Categ>
-        </Container>
-    )
+                <Categ mobile={true} className="row">
+                    <div className="col-md-6" style={{ position: 'relative' }}>
+                        {researchVisible ? (
+                            <VideoPlayer source={"http://seedmarketting.s3.ap-south-1.amazonaws.com/Descale.mov"} />
+
+                        ) : (
+                                <Fragment>
+                                    <CatImage ><Research /></CatImage>
+                                    <CatImageBg style={{ left: '-1.4rem', backgroundImage: 'linear-gradient(to bottom, #d600d6, #a455cb)' }} />
+                                </Fragment>
+                            )
+                        }
+
+                    </div>
+                    <div className="col-md-6">
+                        <TextContainer>
+                            <Header mobileHeader={true}><GreenSpan>Research</GreenSpan></Header>
+                            <TextDesc>
+                                Research for top management action
+                        </TextDesc>
+                            <WatchButton purple={true} onClick={() => this.setState({ researchVisible: !researchVisible })}>
+                                {researchVisible ? (
+                                    <WatchText>Close</WatchText>
+                                ) : (
+                                        <WatchText>watch</WatchText>
+                                    )}
+                            </WatchButton>
+                        </TextContainer>
+
+                    </div>
+                </Categ>
+                <Categ mobile={false} reverse={true} className="row">
+                    <div className="col-md-6 ">
+                        <TextContainer>
+                            <Header><GreenSpan>Training </GreenSpan></Header>
+                            <TextDesc>
+                                Video training for over 6600 employees
+                        </TextDesc>
+                            <WatchButton onClick={() => this.setState({ trainigVisible: !trainigVisible })}>
+                                {trainigVisible ? (
+                                    <WatchText>Close</WatchText>
+                                ) : (
+                                        <WatchText>watch</WatchText>
+                                    )}
+                            </WatchButton>
+                        </TextContainer>
+
+                    </div>
+                    <div className="col-md-6" style={{ position: 'relative' }}>
+                        {trainigVisible ? (
+                            <VideoPlayer source={"http://seedmarketting.s3.ap-south-1.amazonaws.com/Descale.mov"} />
+
+                        ) : (
+                                <Fragment>
+                                    <CatImage><Training /></CatImage>
+                                    <CatImageBg />
+                                </Fragment>
+                            )
+                        }
+
+                    </div>
+                </Categ>
+                <Categ mobile={true} desktopUnVisible={true} reverse={true} className="row">
+                    <div className="col-md-6" style={{ position: 'relative' }}>
+                        {trainigVisible ? (
+                            <VideoPlayer source={"http://seedmarketting.s3.ap-south-1.amazonaws.com/Descale.mov"} />
+
+                        ) : (
+                                <Fragment>
+                                    <CatImage><Training /></CatImage>
+                                    <CatImageBg />
+                                </Fragment>
+                            )
+                        }
+                    </div>
+                    <div className="col-md-6 ">
+                        <TextContainer>
+                            <Header mobileHeader={true}><GreenSpan>Training </GreenSpan></Header>
+                            <TextDesc>
+                                Video training for over 6600 employees
+                        </TextDesc>
+                            <WatchButton onClick={() => this.setState({ trainigVisible: !trainigVisible })}>
+                                {trainigVisible ? (
+                                    <WatchText>Close</WatchText>
+                                ) : (
+                                        <WatchText>watch</WatchText>
+                                    )}
+                            </WatchButton>
+                        </TextContainer>
+                    </div>
+                </Categ>
+                <Categ mobile={true} className="row">
+                    <div className="col-md-6" style={{ position: 'relative' }}>
+                        {innovativeVisible ? (
+                            <VideoPlayer source={"http://seedmarketting.s3.ap-south-1.amazonaws.com/Descale.mov"} />
+
+                        ) : (
+                                <Fragment>
+                                    <CatImage ><Innovative /></CatImage>
+                                    <CatImageBg style={{ left: '-1.4rem', backgroundImage: 'linear-gradient(to bottom, #d600d6, #a455cb)' }} />
+                                </Fragment>
+                            )
+                        }
+                    </div>
+                    <div className="col-md-6">
+                        <TextContainer>
+                            <Header mobileHeader={true}><GreenSpan>Innovative</GreenSpan> Marketting Ideas</Header>
+                            <TextDesc>
+                                Sales generating marketting program.
+                        </TextDesc>
+                            <WatchButton purple={true} onClick={() => this.setState({ innovativeVisible: !innovativeVisible })}>
+                                {innovativeVisible ? (
+                                    <WatchText>Close</WatchText>
+                                ) : (
+                                        <WatchText>watch</WatchText>
+                                    )}
+                            </WatchButton>
+                        </TextContainer>
+                    </div>
+                </Categ>
+            </Container>
+        )
+    }
+
 }
 
 export default Caetgories

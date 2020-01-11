@@ -15,6 +15,7 @@ const IndexPage = () => (
     <Landing />
     <Categories />
     <Footer />
+
   </Layout>
 )
 

@@ -10,7 +10,6 @@ import SEO from "../components/seo"
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
-    <Landing />
     <AboutMe />
     <Contact />
   </Layout>

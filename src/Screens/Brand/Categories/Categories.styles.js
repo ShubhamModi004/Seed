@@ -40,7 +40,7 @@ export const GreenSpan = styled.span`
 export const CategRow = styled.div`
 `
 
-export const Categ = styled.button`
+export const Categ = styled(Link) `
     width: 100%;
     height: 20rem;
     padding: 0 !important;

@@ -16,16 +16,16 @@ function AboutMe(props) {
         <Container>
             <Section className="row">
                 <div className="col-md-4">
-                    <GreenSpan>Start</GreenSpan>
-                    <Content>april 14th</Content>
+                    <GreenSpan>Expertise</GreenSpan>
+                    <Content>2 years plus</Content>
                 </div>
                 <div className="col-md-4">
                     <GreenSpan>Clients</GreenSpan>
-                    <Content>245 plus</Content>
+                    <Content>9 plus</Content>
                 </div>
                 <div className="col-md-4">
                     <GreenSpan>Projects</GreenSpan>
-                    <Content>80 Plus</Content>
+                    <Content>240 Plus</Content>
                 </div>
             </Section>
             <AboutContainer>
@@ -33,7 +33,8 @@ function AboutMe(props) {
                     About us
                 </AboutHeader>
                 <AboutContent>
-                    YSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
+                    SEED has done over 240 videos for IFB Industries in 9 product categories and also for internal training and research among other videos over two years. All the videos are strategized, scripted, produced, directed and edited in house by the SEED teams in Goa, for IFB Industries. There is no out sourcing of any kind except for equipment. Thus cutting costs drastically in the making of the video content for IFB Industries.
+                    The SEED teams have expertise in all the computer software and film production experience required to make any kind of video content.The creative capital of each SEED member is equal to mulple creative industries that are conventionally put together to create the kind of video content you will see on this site. Which translates into prolific savings for any company using our services.
                 </AboutContent>
             </AboutContainer>
         </Container>

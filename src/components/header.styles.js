@@ -35,7 +35,11 @@ export const Links = styled.h3`
     line-height: 1.2;
     letter-spacing: normal;
     text-align: left;
-    color: #ffffff;
+    color: #000;
     cursor: pointer;
-    text-shadow: 4px 3px 3px rgba(48,48,48,0.26);
+    text-decoration: none;
+    text-shadow: 4px 3px 3px rgba(48,48,48,0.46);
+    &:hover{
+        text-decoration: none;
+    }
 `

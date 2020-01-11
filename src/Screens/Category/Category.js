@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import VideoPlayer from '../../components/VideoPlayer';
 import "../../../node_modules/video-react/dist/video-react.css";
@@ -25,10 +25,12 @@ import {
 function Caetgories(props) {
     return (
         <Container>
-            <Title>How me made the food company xyz succeed</Title>
-            <VideoPlayer source={"https://seedmarketting.s3.ap-south-1.amazonaws.com/Descale.mov"} />
-            <Title>College students benefiting the most from our abc technology</Title>
-            <VideoPlayer source={"https://seedmarketting.s3.ap-south-1.amazonaws.com/Descale.mov"} />
+            {props.list && props.list.map((item, index) => (
+                <Fragment>
+                    <Title>{item.title}</Title>
+                    <VideoPlayer source={item.source} />
+                </Fragment>
+            ))}
         </Container>
     )
 }

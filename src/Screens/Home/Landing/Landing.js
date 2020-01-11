@@ -6,9 +6,7 @@ import video from "../../../assets/Video.mp4"
 function Landing(props) {
     return (
         <Container>
-            <Video src={video} type="video/mp4" loop muted={true} autoPlay playsinline="true" disablePictureInPicture="true" webkit-playsinline>
-                <source src={video} type="video/mp4" />
-            </Video>
+            <Video poster="../../../assets/Home.png" src={video} type="video/mp4" loop muted={true} autoPlay playsinline="true" disablePictureInPicture="true" webkit-playsinline />
         </Container>
     )
 }

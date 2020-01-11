@@ -58,6 +58,10 @@ export const CallToActions = styled.a`
             justify-content: center;
         }
     }
+    @media screen and (max-width: 490px) {
+            margin-left: -2rem;
+            justify-content: center;
+        }
 `
 
 export const ActionText = styled.p`

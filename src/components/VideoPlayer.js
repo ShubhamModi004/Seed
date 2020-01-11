@@ -21,7 +21,7 @@ export default class PlayerControlExample extends Component {
     }
 
     render() {
-        const { source } = this.props;
+        const { source, poster } = this.props;
         const { played } = this.state;
         return (
             <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 15 }}>
@@ -30,6 +30,7 @@ export default class PlayerControlExample extends Component {
                         this.player = player;
                     }}
                     src={source}
+                    poster={poster}
                 />
                 {!played && (
                     <PlayButton onClick={() => {

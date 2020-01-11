@@ -119,17 +119,27 @@ export const WatchButton = styled.button`
     border-left: 12px solid #27f8e8;
     border: 0;
     width: 7rem;
-    background: #fff;
+    background: transparent;
     display: flex;
     height: 3rem;
+    z-index: 10;
     text-align: center;
     min-width: 12rem;
+    transition: all 0.3s;
     &:before {
         content: "";
         width: 4px;
         height: 3rem;
+        transition: all 0.3s;
         background: ${(props) => props.purple ? '#ef78e8' : '#27f8e8'};
     }
+    &:hover{
+        &:before {
+            background: ${(props) => props.purple ? '#ef78e8' : '#27f8e8'};
+            width: 12rem;
+        }
+    }
+    
     @media screen and (max-width: 490px) {
        align-self: center;
     }
