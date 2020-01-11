@@ -49,6 +49,12 @@ import AdvertiseTribal from '../../../components/AdvertiseTribal';
 import AdvertiseWalter from '../../../components/AdvertiseWalter';
 
 
+// FilmMaker and books
+import FilmMaker from '../../../components/FilmMaker';
+import Book1 from '../../../components/Book1';
+import Book2 from '../../../components/Book2';
+
+
 function AboutMe(props) {
     return (
         <Container>
@@ -89,15 +95,12 @@ function AboutMe(props) {
             </AboutContainer>
 
             <Section className="row">
-                <div className="col-md-4">
-                    <GreenSpan style={{ fontSize: 30 }}>Advertise</GreenSpan>
+                <div className="col-md-12">
+                    <GreenSpan style={{ fontSize: 30 }}>The advertising agencies</GreenSpan>
                 </div>
             </Section>
             <CategRow className="row">
-                <div style={{ marginTop: 22 }} className="col-md-4 col-sm-2">
-                    <AdvertiseDdb />
-                </div>
-                <div style={{ marginTop: 22 }} className="col-md-4 col-sm-2">
+                <div style={{ marginTop: 22 }} className="col-md-4 col-2">
                     <AdvertiseMadison />
                 </div>
                 <div style={{ marginTop: 22 }} className="col-md-4 col-sm-2">
@@ -112,7 +115,7 @@ function AboutMe(props) {
             </CategRow>
 
             <Section className="row">
-                <div className="col-md-4 col-sm-2">
+                <div className="col-md-12 col-sm-2">
                     <GreenSpan style={{ fontSize: 30 }}>Brands</GreenSpan>
                 </div>
             </Section>
@@ -174,6 +177,24 @@ function AboutMe(props) {
                 </div>
                 <div style={{ marginTop: 22 }} className="col-md-4 col-sm-2">
                     <BrandVolkswagen />
+                </div>
+            </CategRow>
+
+
+            <Section style={{ marginTop: 40 }} className="row">
+                <div className="col-12">
+                    <GreenSpan style={{ fontSize: 30 }}>Shoumitra is also a Film Maker and an Author </GreenSpan>
+                </div>
+            </Section>
+            <CategRow className="row">
+                <div style={{ marginTop: 22 }} className="col-md-12 col-2">
+                    <FilmMaker />
+                </div>
+                <div style={{ marginTop: 22 }} className="col-md-6 col-2">
+                    <Book1 />
+                </div>
+                <div style={{ marginTop: 22 }} className="col-md-6 col-2">
+                    <Book2 />
                 </div>
             </CategRow>
         </Container>
