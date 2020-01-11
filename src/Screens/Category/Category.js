@@ -5,6 +5,7 @@ import "../../../node_modules/video-react/dist/video-react.css";
 import {
     Container,
     Header,
+    Description,
     GreenSpan,
     ViewButton,
     ViewAll,
@@ -15,7 +16,8 @@ import {
     WatchText,
     CatImage,
     CatImageBg,
-    Title
+    Title,
+    Desc
 } from './Category.styles';
 
 
@@ -23,13 +25,18 @@ import {
 
 
 function Caetgories(props) {
-    console.log(props.list)
+    console.log('category', props.list.list)
     return (
         <Container>
-            {props.list && props.list.list.map((item, index) => (
+            <Header><GreenSpan>{props.list.list.title}</GreenSpan></Header>
+            <Description>{props.list.list.description}</Description>
+            {props.list && props.list.list.list.map((item, index) => (
                 <Fragment>
-                    <Title>{item.title}</Title>
-                    <VideoPlayer source={item.source} />
+                    <Title><GreenSpan>{item.title}</GreenSpan></Title>
+                    <Desc>{item.desc}</Desc>
+                    {item.videos.map((video, index) => (
+                        <VideoPlayer key={index} source={video.source} />
+                    ))}
                 </Fragment>
             ))}
         </Container>

@@ -31,6 +31,17 @@ export const Header = styled.h1`
     }
 `
 
+export const Description = styled.p`
+    font-family: Raleway;
+    font-size: 2.3rem;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+`
+
 export const GreenSpan = styled.span`
     color: #1ead7c;
 `
@@ -189,6 +200,20 @@ export const CatImageBg = styled.div`
 
 
 export const Title = styled.h1`
+    font-family: Raleway;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+     margin-top: 4rem;
+    margin-bottom: 3rem;
+`
+
+export const Desc = styled.p`
     font-family: Raleway;
     font-size: 2rem;
     font-weight: normal;
