@@ -33,7 +33,7 @@ export const Header = styled.h1`
 
 export const Description = styled.p`
     font-family: Raleway;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.17;
@@ -215,7 +215,7 @@ export const Title = styled.h1`
 
 export const Desc = styled.p`
     font-family: Raleway;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
