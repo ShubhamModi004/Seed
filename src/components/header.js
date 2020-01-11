@@ -10,9 +10,11 @@ import {
   Links
 } from './header.styles';
 
+import LogoImage from '../assets/Logo.png';
+
 const Component = ({ siteTitle }) => (
   <Header>
-    <Logo><h2 style={{ color: '#fff' }}>Logo</h2></Logo>
+    <Logo src={LogoImage} resizeMode="contain" />
     <NavLinks>
       <Link to="/"><Links>Home</Links></Link>
       <Link to="/about"><Links style={{ marginLeft: 40 }}>About</Links></Link>

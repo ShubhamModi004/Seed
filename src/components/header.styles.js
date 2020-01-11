@@ -14,7 +14,7 @@ export const Header = styled.header`
     padding: 3% 10%;
 `
 
-export const Logo = styled.div`
+export const Logo = styled.img`
     width: 80px;
 `
 

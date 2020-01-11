@@ -12,7 +12,7 @@ import SEO from "../../components/seo"
 const IndexPage = (props) => {
     return (
         <Layout>
-            <SEO title="Home" />
+            <SEO title="Branding" />
             <Category list={props.location.state} />
             <Footer />
         </Layout>
