@@ -25,11 +25,15 @@ import {
 
 
 function Caetgories(props) {
-    console.log('category', props.list.list)
+
     return (
         <Container>
-            <Header><GreenSpan>{props.list.list.title}</GreenSpan></Header>
-            <Description>{props.list.list.description}</Description>
+            {props.list && (
+                <Fragment>
+                    <Header><GreenSpan>{props.list.list.title}</GreenSpan></Header>
+                    <Description>{props.list.list.description}</Description>
+                </Fragment>
+            )}
             {props.list && props.list.list.list.map((item, index) => (
                 <Fragment>
                     <Title><GreenSpan>{item.title}</GreenSpan></Title>
