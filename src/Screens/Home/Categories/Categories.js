@@ -22,10 +22,10 @@ import { navigate } from "gatsby"
 
 
 // importing image
-import Research from '../../../components/images/Research';
-import Training from '../../../components/images/Training';
-import Branding from '../../../components/images/Branding';
-import Innovative from '../../../components/images/Innovative';
+import Research from '../../../components/Research';
+import Training from '../../../components/Training';
+import Branding from '../../../components/Branding';
+import Innovative from '../../../components/Innovative';
 
 
 
