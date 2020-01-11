@@ -10,6 +10,7 @@ const Branding = () => {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
+          
         }
       }
     }
