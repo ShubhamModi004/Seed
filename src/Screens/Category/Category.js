@@ -23,9 +23,10 @@ import {
 
 
 function Caetgories(props) {
+    console.log(props.list)
     return (
         <Container>
-            {props.state.list && props.state.list.map((item, index) => (
+            {props.list && props.list.list.map((item, index) => (
                 <Fragment>
                     <Title>{item.title}</Title>
                     <VideoPlayer source={item.source} />
