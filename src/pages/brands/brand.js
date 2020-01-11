@@ -10,7 +10,6 @@ import Image from "../../components/image"
 import SEO from "../../components/seo"
 
 const IndexPage = (props) => {
-    console.log(window.history.state);
     return (
         <Layout>
             <SEO title="Home" />
