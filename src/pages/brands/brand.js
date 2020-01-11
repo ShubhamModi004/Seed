@@ -13,7 +13,7 @@ const IndexPage = (props) => {
     return (
         <Layout>
             <SEO title="Home" />
-            <Category list={props.location.state.list} />
+            <Category list={props.location.state} />
             <Footer />
         </Layout>
     )
